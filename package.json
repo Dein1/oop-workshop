@@ -1,0 +1,32 @@
+{
+  "name": "oop-workshop",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dein1/oop-workshop.git"
+  },
+  "author": "Dmitry Abramov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dein1/oop-workshop/issues"
+  },
+  "homepage": "https://github.com/Dein1/oop-workshop#readme",
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "babel-cli": "*",
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "babel-eslint": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "*"
+  }
+}
