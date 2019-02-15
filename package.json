@@ -2,7 +2,8 @@
   "name": "oop-workshop",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": "dist/bin/get-geo.js",
   "scripts": {
     "test": "jest",
     "babel-node": "babel-node",
@@ -19,14 +20,24 @@
   },
   "homepage": "https://github.com/Dein1/oop-workshop#readme",
   "devDependencies": {
-    "jest": "^24.1.0",
-    "babel-cli": "*",
-    "@babel/core": "*",
-    "@babel/preset-env": "*",
-    "babel-eslint": "*",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-import": "*",
-    "eslint-plugin-jest": "*"
+    "eslint-plugin-jest": "*",
+    "jest": "^24.1.0",
+    "jest-cli": "^24.0.0"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-pipeline-operator": "^7.3.2",
+    "@babel/polyfill": "^7.2.5",
+    "axios": "^0.18.0",
+    "commander": "^2.19.0"
   }
 }
