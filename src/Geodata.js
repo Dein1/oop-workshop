@@ -25,8 +25,16 @@ export class Geodata {
   }
 
   format() {
-    const { country, region, city } = this.parse();
-    return `country: ${country} | region: ${region} | city: ${city}`;
+    const {
+      country,
+      region,
+      city,
+      status,
+    } = this.parse();
+    if (status === 'sucess') {
+      return `country: ${country} | region: ${region} | city: ${city}`;
+    }
+    return 'Invalid IP';
   }
 }
 
