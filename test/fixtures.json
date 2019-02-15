@@ -1,5 +1,6 @@
 {
   "city": "Moscow",
   "region": "MOW",
-  "country": "Russia"
+  "country": "Russia",
+  "status": "success"
 }

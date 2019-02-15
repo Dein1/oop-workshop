@@ -31,7 +31,7 @@ export class Geodata {
       city,
       status,
     } = this.parse();
-    if (status === 'sucess') {
+    if (status === 'success') {
       return `country: ${country} | region: ${region} | city: ${city}`;
     }
     return 'Invalid IP';
