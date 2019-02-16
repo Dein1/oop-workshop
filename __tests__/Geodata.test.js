@@ -1,5 +1,5 @@
 import Geodata from '../src/Geodata';
-import mockFetch from './__fixtures__/mock';
+import mockFetch from './__fixtures__/geodataMock';
 
 test('should output right', async () => {
   const geoData = new Geodata(mockFetch);
