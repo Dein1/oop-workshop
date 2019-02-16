@@ -7,5 +7,5 @@ program
   .version('0.1.0')
   .description('Get geo information by ip.')
   .arguments('[ip]')
-  .action((ip = '') => printGeo(ip))
+  .action(async (ip = '') => console.log(await printGeo(ip)))
   .parse(process.argv);

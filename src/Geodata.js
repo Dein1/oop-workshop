@@ -1,22 +1,32 @@
+import axios from 'axios';
+
+const host = 'http://ip-api.com/json/';
+
 export default class Geodata {
-  constructor(data) {
-    this.data = data;
+  constructor(fetchModule = axios) {
+    this.fetchModule = fetchModule;
   }
 
-  parse() {
-    const parsedData = this.data
+  parse = async (data) => {
+    const parsedData = data
       |> JSON.stringify
       |> JSON.parse;
     return parsedData;
   }
 
-  format() {
+  fetchIpInfo = async (ip) => {
+    const response = await this.fetchModule.get(`${host}${ip}`);
+    return response.data;
+  }
+
+  getGeoDataByIp = async (ip) => {
+    const data = await this.fetchIpInfo(ip);
     const {
       country,
       region,
       city,
       status,
-    } = this.parse();
+    } = await this.parse(data);
     if (status === 'success') {
       return `country: ${country} | region: ${region} | city: ${city}`;
     }
