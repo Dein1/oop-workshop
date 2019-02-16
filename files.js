@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const middle = arr => arr[Math.ceil(arr.length / 2)];
+const getMiddleElement = arr => arr[Math.ceil(arr.length / 2)];
 
 const addS = str => (str[str.length - 1] === 's' ? str : `${str}s`);
 
@@ -9,7 +9,7 @@ const main = () => {
   return dir
     .filter(el => el[0] !== '.')
     .sort()
-    |> middle
+    |> getMiddleElement
     |> addS
     |> (_ => _.toUpperCase())
     |> console.log;
