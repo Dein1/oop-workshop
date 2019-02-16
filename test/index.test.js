@@ -1,4 +1,5 @@
-import { Geodata, getIpInfo } from '../src/Geodata';
+import Geodata from '../src/Geodata';
+import { getIpInfo } from '../src/index';
 import fixture from './fixtures.json';
 
 test('should print proper geodata', () => {
