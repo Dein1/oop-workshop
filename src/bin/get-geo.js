@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 import program from 'commander';
-import printGeo from '../Geodata';
+import printGeo from '../index';
 
 program
   .version('0.1.0')
