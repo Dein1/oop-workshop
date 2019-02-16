@@ -21,14 +21,13 @@ export default class Geodata {
 
   getGeoDataByIp = async (ip) => {
     const data = await this.fetchIpInfo(ip);
-    const {
-      country,
-      region,
-      city,
-      status,
-    } = await this.parse(data);
-    if (status === 'success') {
-      return `country: ${country} | region: ${region} | city: ${city}`;
+    const parsedData = await this.parse(data);
+    return parsedData;
+  }
+
+  format = (geoData) => {
+    if (geoData.status === 'success') {
+      return `country: ${geoData.country} | region: ${geoData.region} | city: ${geoData.city}`;
     }
     return 'Invalid IP';
   }

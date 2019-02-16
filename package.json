@@ -40,5 +40,8 @@
     "@babel/polyfill": "^7.2.5",
     "axios": "^0.18.0",
     "commander": "^2.19.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["<rootDir>/__tests__/__fixtures__/"]
   }
 }
