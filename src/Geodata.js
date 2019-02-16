@@ -7,13 +7,6 @@ export default class Geodata {
     this.fetchModule = fetchModule;
   }
 
-  parse = async (data) => {
-    const parsedData = data
-      |> JSON.stringify
-      |> JSON.parse;
-    return parsedData;
-  }
-
   fetchIpInfo = async (ip) => {
     const response = await this.fetchModule.get(`${host}${ip}`);
     return response.data;
@@ -21,8 +14,7 @@ export default class Geodata {
 
   getGeoDataByIp = async (ip) => {
     const data = await this.fetchIpInfo(ip);
-    const parsedData = await this.parse(data);
-    return parsedData;
+    return data;
   }
 
   format = (geoData) => {
