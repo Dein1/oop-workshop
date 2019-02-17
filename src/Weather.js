@@ -1,6 +1,6 @@
 export default class Weather {
-  constructor(weatherService) {
-    this.weatherService = weatherService;
+  constructor(WeatherService) {
+    this.weatherService = new WeatherService();
   }
 
   getWeatherByCity = async (city) => {
