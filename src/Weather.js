@@ -4,9 +4,6 @@ export default class Weather {
   }
 
   getWeatherByCity = async (city) => {
-    if (this.weatherService === null) {
-      return 'Invalid service';
-    }
     const weather = await this.weatherService.getByCity(city);
     return weather;
   }
